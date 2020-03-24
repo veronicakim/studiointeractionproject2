@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>3</title>
+	<link rel="stylesheet" type="text/css" href="">
+
+	<style>
+
+		body {
+			/*background-color: pink;*/
+			background: url(image3.jpg);
+			width:100%;
+			background-size:cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			margin: 0px;
+		}
+
+		@keyframes change-bgcolor {
+  			0%  {background-color:black;}
+  			3%  {background-color:white;}
+  			4%  {background-color:black;}
+  			5%  {background-color:white;}
+  			6%  {background-color:black;}
+  			8%  {background-color:white;}
+  			100%  {background-color:white opacity:0;}
+		}
+
+		.flash {
+    		/*position: relative;*/
+    		/*width: 800vw;
+    		height: 800vh;*/
+   			background-color: white opacity:0;
+    		animation: change-bgcolor /*2s*/ /*infinite*/;
+    		animation-duration: 12s;
+  			/*animation-delay: 2s;*/
+
+  			width: 541px;
+  			height: 341px;
+
+  			margin-left: 449px;
+  			margin-top: 135px;
+		}
+
+			.flash:hover {
+				background-color: #edc600;
+			}
+		
+	</style>
+
+</head>
+
+<body>
+
+	<a class="flash" href= "page4.html">
+		<div class="flash"></div>
+	</a>
+
+</body>
+
+</html>
