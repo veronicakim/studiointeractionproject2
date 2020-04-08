@@ -9,49 +9,86 @@
 
 		body {
 			/*background-color: pink;*/
-			background: url(image4.jpg);
-			/*width: 100px;
-			height: 50px;*/
-			/*width100%;*/
-/*			background-size:cover;
-*/			/*background-position: center center;*/
+			background: url(image4.png);
 			background-repeat: no-repeat;
-/*			background-attachment: fixed;
-*/			background-size: 1440px 705px;
+			background-size: 1440px 705px;
 			background-color: black;
 
 			margin: 0px;
 		}
 
-		@keyframes change-bgcolor {
-  			0%  {background-color:black;}
-  			3%  {background-color:white;}
-  			4%  {background-color:black;}
-  			5%  {background-color:white;}
-  			6%  {background-color:black;}
-  			8%  {background-color:white;}
-  			100%  {background-color:white opacity:0;}
+		.whole {
+			height: 100vh;
+	        width: 100vw;
+
+	        position: relative;
+
+	        margin: 0px;
 		}
 
-		.flash {
-    		/*position: relative;*/
-    		/*width: 800vw;
-    		height: 800vh;*/
-   			background-color: white opacity:0;
-    		animation: change-bgcolor /*2s*/ /*infinite*/;
-    		animation-duration: 12s;
-  			/*animation-delay: 2s;*/
+			.flash {
+					background-color: white opacity: 0;
+		    		animation: change-bgcolor;
+		    		animation-duration: 2s;
 
-  			width: 541px;
-  			height: 341px;
+		  			height: 100vh;
+		        	width: 100vw;
 
-  			margin-left: 449px;
-  			margin-top: 140px;
-		}
+		        	position: absolute;
+					z-index: 2;
 
-			.flash:hover {
-				background-color: #556300;
+					margin: 0px;
+				}
+					@keyframes change-bgcolor {
+			  			0%  {background-color:black;}
+			  			10%  {background-color:white;}
+			  			20%  {background-color:black;}
+			  			30%  {background-color:white;}
+			  			40%  {background-color:black;}
+					}
+
+						.button {
+							margin: 50px;
+							position: absolute;
+							right: 0px;
+
+							width: 50px;
+							height: 50px;
+							align-self: right;
+						}
+							.circle {
+								width: 50px;
+								height: 50px;
+							    background: #A93535;
+							    border-radius: 50%;
+							    transition: all .3s;
+							}
+								.circle:hover { 
+									width: 46px;
+									height: 46px;
+								    background: red;
+								    border-radius: 50%;
+								    background: #9C1D1D;
+								}
+
+			.develop {
+	   			background-color: white opacity:0;
+	    		animation: develop;
+	    		animation-duration: 14s;
+
+	  			width: 322px;
+		  		height: 202px;
+		  		margin-left: 666px;
+		  		margin-top: 242px;
+
+		  		position: absolute;
+				z-index: 1;
 			}
+				@keyframes develop {
+		  			0%  {background-color:white;}
+		  			15% {background-color:white;}
+		  			100%  {background-color:white opacity:0;}
+				}
 		
 	</style>
 
@@ -59,9 +96,21 @@
 
 <body>
 
-	<a class="flash" href= "page5.html">
-		<div class="flash"></div>
-	</a>
+	<div class="whole">
+
+		<div class="flash">
+			
+			<div class="button">
+				<a class="circle" href= "page5.html">
+					<div class="circle"></div>
+				</a>
+			</div>
+
+		</div>
+
+		<div class="develop"></div>
+
+	</div>
 
 </body>
 
