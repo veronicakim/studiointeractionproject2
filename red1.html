@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>red</title>
+	<link rel="stylesheet" type="text/css" href="">
+
+	<style>
+
+		body {
+			/*background-color: pink;*/
+			background: url(r1.png);
+			background-repeat: no-repeat;
+			background-size: 1440px 705px;
+			background-color: black;
+
+			margin: 0px;
+		}
+
+		.whole {
+			height: 100vh;
+	        width: 100vw;
+
+	        position: relative;
+
+	        margin: 0px;
+		}
+
+			.flash {
+					background-color: white opacity: 0;
+		    		animation: change-bgcolor;
+		    		animation-duration: 2s;
+
+		  			height: 100vh;
+		        	width: 100vw;
+
+		        	position: absolute;
+					z-index: 2;
+
+					margin: 0px;
+				}
+					@keyframes change-bgcolor {
+			  			0%  {background-color:black;}
+			  			10%  {background-color:white;}
+			  			20%  {background-color:black;}
+			  			30%  {background-color:white;}
+			  			40%  {background-color:black;}
+					}
+
+						.button1 {
+							margin: 50px;
+							right: 0px;
+							width: 50px;
+							height: 50px;
+						}
+							.circle1 {
+								width: 50px;
+								height: 50px;
+								background: #d16f54;
+								border-radius: 50%;
+								transition: all .3s;
+							}
+								.circle1:hover { 
+									width: 46px;
+									height: 46px;
+									border-radius: 50%;
+									background: #b8563b;
+								}
+
+			.develop {
+	   			background-color: white opacity:0;
+	    		animation: develop;
+	    		animation-duration: 14s;
+
+	  			width: 322px;
+		  		height: 202px;
+		  		margin-left: 373px;
+		  		margin-top: 88px;
+
+		  		position: absolute;
+				z-index: 1;
+			}
+				@keyframes develop {
+		  			0%  {background-color:white;}
+		  			15% {background-color:white;}
+		  			100%  {background-color:white opacity:0;}
+				}
+		
+	</style>
+
+</head>
+
+<body>
+
+	<iframe style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/WA6NvLRJ9ow?controls=0?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div class="whole">
+
+		<div class="flash">
+			
+			<div class="button1">
+				<a class="circle1" href= "red2.html">
+					<div class="circle1"></div>
+				</a>
+			</div>
+
+		</div>
+
+		<div class="develop"></div>
+
+	</div>
+
+</body>
+
+</html>
